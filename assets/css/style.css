@@ -213,7 +213,7 @@ html {
     padding-top: 50%;
     position: relative;
     /* viết gộp background */
-    background: url('/assets/img/slider/iu_slider1.jpg') top center /cover no-repeat;
+    background: url('/assets/img/iu_slider1.jpg') top center /cover no-repeat;
 }
 
 #slider .text-content{
