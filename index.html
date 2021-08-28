@@ -8,6 +8,7 @@
     <!-- thay icon của web -->
     <link rel="icon" href="https://i.pinimg.com/originals/ec/7f/e5/ec7fe5df3a819d8d786e65f355b445de.jpg" type="image/x-icon"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="#order">Order albums</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         Works 
                         <i class="nav-arrow-down ti-angle-down">
 
@@ -37,11 +38,16 @@
             </ul>
             <!-- end nav -->
 
-            <!-- begin search button -->
+            <!-- search button -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!-- end search button -->
+
+            <!-- menu button -->
+            <div id="mobile-menu" class="moblie-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            
 
          </div>
 
@@ -69,19 +75,19 @@
                 <h2 class="section-heading">Photos</h2>
                 <p class="section-sub-heading"> Copy images on multiple pages</p>
                 <div class="row photos-list">
-                    <div class="col col-4 text-center">
+                    <div class="col col-4 s-col-full mt-32 text-center">
                         <p class="photo-name">Spring</p>
                         <img src="./assets/img/photos/photo_iu1.jpg" alt="" class="photo-img">
                     </div>
-                    <div class="col col-4 text-center">
+                    <div class="col col-4 s-col-full mt-32 text-center">
                         <p class="photo-name">Fall</p>
                         <img src="./assets/img/photos/photo_iu2.jpg" alt="" class="photo-img">
                     </div>
-                    <div class="col col-4 text-center">
+                    <div class="col col-4 s-col-full mt-32 text-center">
                         <p class="photo-name">Winter</p>
                         <img src="./assets/img/photos/photo_iu3.jpg" alt="" class="photo-img">
                     </div>
-                    <div class="col col-4 text-center">
+                    <div class="col col-4 s-col-full mt-32 text-center">
                         <p class="photo-name">Summer</p>
                         <img src="./assets/img/photos/photo_iu4.jpg" alt="" class="photo-img">
                     </div>
@@ -104,33 +110,33 @@
 
                     <!-- albums -->
                     <div class="row albums-list">
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16 s-col-full">
                             <img src="./assets/img/Order/order_iu4.jpg" alt="Photo IU 1" class="album-img">
                             <div class="album-body">
                                 <h3 class="album-heading">LILAC</h3>
                                 <p class="album-time">2021.03.25</p>
                                 <p class="album-desc">[Lilac], [Coin], [Celebrity]</p>
-                                <button class="btn js-buy-album">Buy Album</button>
+                                <button class="btn s-full-width text-center js-buy-album">Buy Album</button>
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16 s-col-full">
                             <img src="./assets/img/Order/order_iu2.jpg" alt="Photo IU 2" class="album-img">
                             <div class="album-body">
                                 <h3 class="album-heading">LILAC</h3>
                                 <p class="album-time">2021.03.25</p>
                                 <p class="album-desc">[Lilac], [Coin], [Celebrity]</p>
-                                <button class="btn js-buy-album">Buy Album</button>
+                                <button class="btn s-full-width text-center js-buy-album">Buy Album</button>
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16 s-col-full">
                             <img src="./assets/img/Order/order_iu3.jpg" alt="Photo IU 3" class="album-img">
                             <div class="album-body">
                                 <h3 class="album-heading">LILAC</h3>
                                 <p class="album-time">2021.03.25</p>
                                 <p class="album-desc">[Lilac], [Coin], [Celebrity]</p>
-                                <button class="btn js-buy-album">Buy Album</button>
+                                <button class="btn s-full-width text-center js-buy-album">Buy Album</button>
                             </div>
                         </div>
                         <!-- <div class="clear"></div> -->
@@ -145,19 +151,19 @@
                 <p class="section-sub-heading"> Fan? Drop a note!</p>
 
                 <div class="row contact-content">
-                    <div class="col col-2 contact-info">
+                    <div class="col col-2 s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>Seoul, Korea</p>
-                        <p><i class="ti-mobile"></i>Phone: +82 9999 9999</p>
-                        <p><i class="ti-email"></i>fangirliu@gmail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+82 9999 9999">+82 9999 9999</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto: fangirliu@gmail.com">fangirliu@gmail.com</a></p>
                     </div>
-                    <div class="col col-2 contact-form">
+                    <div class="col col-2 s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-2">
+                                <div class="col col-2 s-col-full">
                                     <!-- placeholder="..." để nó hiện dưới nền của input á -->
                                     <input type="text" name="" placeholder="Name" required id="contact-name" class="form-control">
                                 </div>
-                                <div class="col col-2">
+                                <div class="col col-2 s-col-full s-mt-8">
                                     <!-- placeholder="..." để nó hiện dưới nền của input á -->
                                     <input type="email" name="" placeholder="Email" required id="contact-email" class="form-control">
                                 </div>
@@ -169,7 +175,7 @@
                                     <input type="text" name="" placeholder="Message" required id="contact-message" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -264,5 +270,68 @@
          })
      </script>
     
+    <script>
+        // k đặt tên biết bằng dấu -
+        // lấy ra header từ Id ="header"
+        var header = document.getElementById('header');
+        // kiểm tra xem có lấy đc k trong tab console
+        // console.log(header);
+        var mobileMenu = document.getElementById('mobile-menu');
+        // console.log(mobileMenu);
+        // lấy chiều cao header
+        var headerHeight =header.clientHeight;
+
+        // đóng/mở menu
+        mobileMenu.onclick =function() {
+            // thử xem đc k khi click vào menu
+            // alert('thông báo');
+
+            // in ra chiều cao của header
+            // console.log(header.clientHeight);
+
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                // hiện menu
+                header.style.height = 'auto';
+            }
+            else {
+                // ẩn menu
+                header.style.height = null;
+            }
+        }
+
+
+        // tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        // console.log(menuItems);
+
+        for(var i=0;i<menuItems.length;i++){
+            var menuItem = menuItems[i];
+            // console.log(menuItem);
+            
+            menuItem.onclick = function (event) {
+                // có chị e liền kề và chị em liền kề và chị e liền kề có tên class là subnav
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                // console.log(this);
+                if(isParentMenu) {
+                    // bỏ qua hành vi mặc định
+                    event.preventDefault();
+                }
+                else {
+                    // ẩn menu
+                    header.style.height = null;
+                }
+
+                if(closeMenu){
+                    header.style.height = null;
+                }
+                else {
+                    event.preventDefault();
+                }
+            }
+        }
+
+
+    </script>
 </body>
 </html>

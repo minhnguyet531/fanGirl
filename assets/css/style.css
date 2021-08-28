@@ -73,10 +73,15 @@ html {
     margin-top: 16px!important;
 }
 
+.mt-32 {
+    margin-top: 32px!important;
+}
+
 .pull-right {
     /* kéo sang phải */
     float: right !important;
 }
+
 .btn{
     color: white;
     background-color: #14397d;
@@ -86,6 +91,10 @@ html {
     display: inline-block;
     margin-top: 15px;
     border:none;
+    /* bỏ đi css mặc định mà đc trình duyệt add vào (các trình duyệt thường gặp: chrome ,...)*/
+    appearance: none;
+    /* bỏ đi css mặc định mà đc trình duyệt add vào (các trình duyệt của apple*/
+    -webkit-appearance: none;
 }
 
 .btn:hover{
@@ -114,8 +123,17 @@ html {
     right: 0;
     /* chọn gt để sao cho nó nổi lên */
     z-index: 1;
+    /* Khi con nằm ngoài cha thì ẩn nó */
 }
 
+#header .moblie-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .moblie-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
@@ -128,6 +146,15 @@ html {
      cursor: pointer;
 }
 
+#header .moblie-menu-btn:hover {
+    background-color: #d7eaf3;
+}
+
+#header .moblie-menu-btn:hover .menu-icon{
+    color: #14397d;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #BCFEFE;
     font-size: 20px;
@@ -214,11 +241,15 @@ html {
     position: relative;
     /* viết gộp background */
     background: url('../img/slider/slider_iu.jpg') top center /cover no-repeat;
+    /* ./ cứ 1 chấm là nhảy ra ngoài 1 file 
+    vd ./ thì slide_iu.jpg sẽ ngang hàng với file slide
+      ../ thì slide_iu.jpg sẽ ngang hàng với file img
+    */
 }
 
 #slider .text-content{
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     color:#BCFEFE;
    
     /* căn ra div  class="text-content" ra giữa cách 1 */
@@ -236,19 +267,23 @@ html {
      */
     /* căn text ra giữa */
     text-align: center;
-    right: 32px;
+    right: 30px;
 
 }
 
 #slider .text-heading{
     /* giảm độ dày chữ */
     font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
+    /* đổ bóng cho text */
+    text-shadow: 0 0 2px gray;
 }
 
 #slider .text-description{
-    font-size: 15px;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+    /* đổ bóng cho text */
+    text-shadow: 0 0 2px gray;
 }
 
 /* 
@@ -258,10 +293,13 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     /* căn giữa */
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 
@@ -292,7 +330,7 @@ html {
 }
 
 #content .photos-list{
-    margin-top: 48px;
+    margin-top: 32px;
     /* cách lm thàng cha ôm đc thg con khi dùng float */
     /* overflow: hidden; */
 }
@@ -365,7 +403,7 @@ html {
 .albums-list{
     /* margin: top left_right bottom */
     /* margin: 32px -8px 48px; */
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .album-img{
@@ -414,6 +452,15 @@ html {
 .contact-info i[class*="ti-"]{
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a {
+    color: #009688;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-form {
@@ -475,7 +522,7 @@ html {
 
 }
 
-.modal.open {
+.modal .open {
     display: flex;
 }
 
